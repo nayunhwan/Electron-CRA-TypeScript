@@ -148,7 +148,7 @@ react: npm run react-start
 electron: npm run electron-start
 ```
 
-Run
+## Run
 
 ```sh
 $ yarn start
