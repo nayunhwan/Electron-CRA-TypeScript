@@ -9,3 +9,11 @@ At First, Bootstrap Project using [Create React App](https://github.com/facebook
 ```sh
 $ npx create-react-app <USER-PROJECT-NAME> --typescript
 ```
+
+## Referenced
+
+https://gist.github.com/matthewjberger/6f42452cb1a2253667942d333ff53404#prerequisites
+
+## LICENSE
+
+[MIT Licensed](./LICENSE)
