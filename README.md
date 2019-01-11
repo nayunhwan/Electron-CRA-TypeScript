@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to make this boilerplate
 
-> You can also just clone this repository. But if you just clone and use this repository, In this case may be regacy project. So I recommend you following this description.
+> You can also just clone this repository. But if you just clone and use this repository, may be regacy project. So I recommend you following this description.
 
 At First, Bootstrap Project using [Create React App](https://github.com/facebook/create-react-app).
 
@@ -19,7 +19,7 @@ Install **Electron**
 $ yarn add -D electron
 ```
 
-Create `electron-starter.js` at Root Directory
+Create `electron-starter.js` in Root Directory
 
 > Note: Don't use **.ts** extension. YOU MUST USE **.js** EXTENSION.
 
@@ -85,7 +85,9 @@ app.on("activate", function() {
 // code. You can also put them in separate files and require them here.
 ```
 
-Also Create `electron-wait-react.js` at Root Directory.
+Also Create `electron-wait-react.js` in Root Directory.
+
+> Note: Don't use **.ts** extension. YOU MUST USE **.js** EXTENSION.
 
 ```js
 const net = require("net");
@@ -115,6 +117,41 @@ tryConnection();
 client.on("error", (error) => {
   setTimeout(tryConnection, 1000);
 });
+```
+
+Install `foreman` and `cross-env`
+
+```sh
+$ yarn add -D foreman cross-env
+```
+
+Edit `package.json`
+
+```json
+...
+"main": "./electron-starter.js",
+"scripts": {
+  "start": "cross-env BROWSER=none nf start -p 3000",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "electron": "electron .",
+  "electron-start": "node ./electron-wait-react",
+  "react-start": "react-scripts start"
+},
+```
+
+Create `Procfile` in Root Directory.
+
+```
+react: npm run react-start
+electron: npm run electron-start
+```
+
+Run
+
+```sh
+$ yarn start
 ```
 
 ## Referenced
