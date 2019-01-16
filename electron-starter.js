@@ -7,10 +7,24 @@ const path = require("path");
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function createWindow() {
+async function installExtensions() {
+  const installer = require("electron-devtools-installer");
+  const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
+  const extensions = ["REACT_DEVELOPER_TOOLS", "REDUX_DEVTOOLS"];
+
+  return Promise.all(
+    extensions.map((name) => installer.default(installer[name], forceDownload))
+  ).catch(console.log);
+}
+
+async function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({ width: 800, height: 600 });
 
+  if (process.env.ELECTRON_START_URL) {
+    await installExtensions();
+    mainWindow.openDevTools();
+  }
   // and load the index.html of the app.
   const startUrl =
     process.env.ELECTRON_START_URL ||
