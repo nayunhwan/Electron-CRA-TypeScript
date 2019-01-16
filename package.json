@@ -32,9 +32,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "cross-env": "^5.2.0",
     "electron": "^4.0.1",
     "electron-devtools-installer": "^2.2.4",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "foreman": "^3.0.1"
   }
 }
