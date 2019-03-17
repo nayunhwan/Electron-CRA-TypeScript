@@ -156,7 +156,7 @@ $ yarn start
 
 ## Referenced
 
-https://gist.github.com/matthewjberger/6f42452cb1a2253667942d333ff53404#prerequisites
+https://gist.github.com/matthewjberger/6f42452cb1a2253667942d333ff53404
 
 ## LICENSE
 
