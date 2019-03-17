@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to make this boilerplate
 
-> You can also just clone this repository. But if you just clone and use this repository, may be regacy project. So I recommend you following this description.
+> You can also just clone this repository. But if you just clone and use this repository, may be legacy project. So I recommend you following this description.
 
 At First, Bootstrap Project using [Create React App](https://github.com/facebook/create-react-app).
 
