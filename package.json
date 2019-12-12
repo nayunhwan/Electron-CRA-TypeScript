@@ -14,7 +14,7 @@
   },
   "main": "./electron-starter.js",
   "scripts": {
-    "start": "cross-env BROWSER=none nf start -p 3000",
+    "start": "cross-env BROWSER=none cross-env ELECTRON_DISABLE_SECURITY_WARNINGS=true nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
